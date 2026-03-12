@@ -1,19 +1,17 @@
 <div class="cyber-container">
   <video autoplay muted loop id="cyberVideo" class="cyber-bg-video">
-    <!-- [PERLU DIGANTI/JADI PERIKSA] Video latar belakang -->
-    <!-- Pastikan link valid atau ganti dengan URL video yang diinginkan -->
-    <source src="https://files.catbox.moe/tojvxi.mp4">
+    <source src="https://files.catbox.moe/tojvxi.mp4" type="video/mp4">
   </video>
-  <div class="cyber-overlay-dark"></div>
-  <div class="cyber-profile-section">
-    <div class="profile-container">
-  <div class="profile-pic-container">
-    <video class="profile-avatar" autoplay muted loop playsinline>
-      <!-- [PERLU DIGANTI] Video avatar profil -->
-      <!-- File "animation.mp4" tidak ada, ganti dengan URL video yang valid -->
-      <source src="https://files.catbox.moe/kpuayw.mp4" type="video/mp4">
-      Browser Anda tidak mendukung video.
-    </video>
+      <div class="cyber-overlay-dark"></div>
+    <div class="cyber-profile-section">
+      <div class="profile-container">
+    <div class="profile-pic-container">
+       <video class="profile-avatar" autoplay muted loop playsinline>
+       <source src="https://files.catbox.moe/kpuayw.mp4" type="video/mp4">
+        Browser Anda tidak mendukung video.
+      </video>
+      <div class="online-indicator"></div>
+    
     <div class="online-indicator"></div>
   </div>
   <div class="profile-info">
@@ -21,8 +19,6 @@
     <p class="profile-subtitle">Secure Payment Gateway</p>
   </div>
 </div>
-
-
     
     <div class="profile-actions">
       <button class="telegram-btn developer-btn" onclick="window.open('https://t.me/Vadell', '_blank')">
@@ -41,12 +37,10 @@
       <h3>PAYMENT METHODS</h3>
     </div>
     <div class="payment-method-card">
-      <!-- [PERLU DIGANTI] Ikon Dana -->
-      <!-- File "rs5teo.jpg" tidak ada, ganti dengan URL gambar yang valid -->
       <img src="https://files.catbox.moe/v3wdtm.jpg" alt="Dana" class="payment-icon">
       <div class="payment-details">
         <h4>Dana Digital Wallet</h4>
-        <p>Secure encrypted transaction</p>
+        <p>transaksi terenkripsi yang aman </p>
       </div>
       <div class="payment-action">
         <span class="status-active">Active</span>
@@ -58,12 +52,10 @@
     </div>
 
     <div class="payment-method-card">
-      <!-- [PERLU DIGANTI] Ikon OVO -->
-      <!-- File "kwuxbv.jpg" tidak ada, ganti dengan URL gambar yang valid -->
       <img src="https://files.catbox.moe/r5mx8r.jpg" alt="OVO" class="payment-icon">
       <div class="payment-details">
         <h4>OVO Digital Payment</h4>
-        <p>Secure encrypted transaction</p>
+        <p>transaksi terenkripsi yang aman </p>
       </div>
       <div class="payment-action">
         <span class="status-active">Active</span>
@@ -75,12 +67,10 @@
     </div>
 
     <div class="payment-method-card">
-      <!-- [PERLU DIGANTI] Ikon GoPay -->
-      <!-- File "pvo95b.jpg" tidak ada, ganti dengan URL gambar yang valid -->
       <img src="https://files.catbox.moe/xgdemr.jpg" alt="GoPay" class="payment-icon">
       <div class="payment-details">
         <h4>GoPay Digital Payment</h4>
-        <p>Secure encrypted transaction</p>
+        <p>transaksi terenkripsi yang aman </p>
       </div>
       <div class="payment-action">
         <span class="status-active">Active</span>
@@ -90,32 +80,30 @@
         </button>
       </div>
     </div>
-    <div class="qris-section">
-      <div class="section-header">
-        <i class="fas fa-qrcode"></i>
-        <h3>UNIVERSAL QRIS</h3>
-      </div>
-      <div class="qris-container">
-        <!-- [PERLU DIGANTI] Gambar QRIS -->
-        <!-- File "d03zep.jpg" tidak ada, ganti dengan URL gambar yang valid -->
-        <img src="https://files.catbox.moe/mupp1o.jpg" alt="QRIS Code" class="qris-image">
-        <div class="scanline"></div>
-      </div>
-      <p class="qris-instruction">
-        Scan with any Indonesian e-wallet app
-      </p>
-      <button class="download-btn" onclick="downloadQRIS()">
-        <i class="fas fa-download"></i>
-        <span>Download QRIS</span>
-      </button>
-    </div>
+<div class="qris-section">
+  <div class="section-header">
+    <i class="fas fa-qrcode"></i>
+    <h3>UNIVERSAL QRIS</h3>
+  </div>
+  
+  <div class="qris-container">
+    <img src="https://files.catbox.moe/mupp1o.jpg" alt="QRIS Code" class="qris-image">
+    <div class="scanline"></div>
+  </div>
+
+  <p class="qris-instruction">
+    Pindai dengan aplikasi e-wallet Indonesia mana pun 
+  </p>
+
+  <div class="download-container" style="display: flex; justify-content: center; margin-top: 10px;">
+    <a href="https://files.catbox.moe/mupp1o.jpg" class="download-btn" download="qris-payment-indonesia.jpg" style="text-decoration: none;">
+      <i class="fas fa-download"></i>
+      <span>DOWNLOAD QRISNYA DISINI</span>
+    </a>
   </div>
 </div>
-
-<!-- [PERLU DIGANTI/HAPUS] Link CSS salah format -->
-<!-- File .jpg bukan CSS, bisa dihapus atau diganti dengan link CSS yang benar -->
-<link rel="stylesheet" href="https://files.catbox.moe/mupp1o.jpg">
-
+ 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
 
 <style>
@@ -474,3 +462,15 @@ body {
 <script>
 function copyNumber(number) {
   navigator.clipboard.writeText(number);
+  alert('Payment number copied: ' + number);
+}
+
+function downloadQRIS() {
+  const link = document.createElement('a');
+  link.href = 'images/d03zep.jpg';
+  link.download = 'qris-payment.jpg';
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+}
+</script>
